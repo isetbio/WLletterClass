@@ -1,5 +1,12 @@
 %% Experiments to show some possible sensor parameters
-
+%
+% Interesting features
+%   1.  CLassify directly from the pixel responses, no image processing
+%   2.  Analyze the tradeoff between pixel size and light level for a given
+%   classification performance
+%
+%   
+%
 ieInit
 
 %%  Diffraction limited optics
@@ -10,6 +17,7 @@ ieAddObject(s); sceneWindow;
 
 oi = oiCreate;
 oif2 = oiSet(oi,'optics fnumber',4);
+oif2 = oiSet(oif2,'optics off axis method','skip');
 
 oif2 = oiCompute(oif2,s);
 ieAddObject(oif2); oiWindow;
@@ -52,5 +60,40 @@ ieAddObject(sensor); sensorWindow('scale',true);
 ip = ipCreate;
 ip = ipCompute(ip,sensor);
 ieAddObject(ip); ipWindow;
+
+%% Little timing check
+
+
+%%
+clear I
+ieSessionSet('wait bar','off');
+
+img = rand(28,28); 
+for ii=1:3, I(:,:,ii) = img; end
+scene = sceneFromFile(I,'rgb');
+
+tic
+for ii=1:16
+    oi = oiCompute(oi,scene);
+    sensor = sensorCompute(sensor,oi);
+end
+toc
+
+%%
+clear I
+img = rand(4*28,4*28); for ii=1:3, I(:,:,ii) = img; end
+scene = sceneFromFile(I,'rgb');
+
+tic
+oi = oiCompute(oi,scene);
+sensor = sensorCompute(sensor,oi);
+toc
+
+%% Suppose your
+
+for ii=1:256
+    I = imread('your image');
+    bigI(theseRows,theseCols) = I;
+end
 
 
