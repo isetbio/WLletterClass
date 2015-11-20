@@ -24,35 +24,43 @@
 ieInit;
 
 % Where are the files to convert
-% mnistDir = '/Users/nupic/code/isetbiotest/mini_mnist';
-mnistDir = '/Users/nupic/soft/nupic.vision/nupic/vision/mnist/original_mnist/testing';
-% mnistDir = '/Users/nupic/code/isetbiotest';
+mnistDirTest = '/Users/nupic/soft/nupic.vision/nupic/vision/mnist/original_mnist/small_training';
+mnistDirTrain = '/Users/nupic/soft/nupic.vision/nupic/vision/mnist/original_mnist/small_training';
+
+mnistDir = mnistDirTest
+testTrain = 'test'
+
+
+% OUT_DIR
 projDir = '~/code/WLletterClass';
 
-mnistISETBIOdir = [mnistDir filesep 'OUT'];
-if ~isdir(mnistISETBIOdir)
-    mkdir(mnistISETBIOdir);
-end
+%% EXP. VARIABLES
+% We are going to change lighting and pixel size
 CharNamesList = 0:9;
+pixelSizes = [1.1e-06, 1.25e-06, 1.4e-06];
+sceneLights = [10, 50, 100];
+fov = 0.8;
 
+% mnistISETBIOdir = [mnistDir filesep 'OUT'];
+% if ~isdir(mnistISETBIOdir)
+%     mkdir(mnistISETBIOdir);
+% end
 
-%% OPTIONS
-ViewResults = 1;  % Make it 1 to visualize results
+%% EXP. OPTIONS
+ViewResults = 0;  % Make it 1 to visualize results
 if ViewResults
     CharNamesList = CharNamesList(6); % Visualize only one category for test
 end
 
-% We are going to change lighting and pixel size
-pixelSizes = [1.1e-06, 1.25e-06, 1.4e-06];
-sceneLights = [10, 50, 100];
-fov = 1;
+
 
 %% LOOP TO PROCESS ALL IMAGES
 for pSize = 1:length(pixelSizes)
     for sLight = 1:length(sceneLights)
         for nc = 1:length(CharNamesList)
             cd([mnistDir filesep num2str(CharNamesList(nc))])
-            WriteFolder = [projDir filesep 'isetMnist' filesep...
+            WriteFolder = [projDir filesep 'data' filesep 'isetMnist' ...
+                            num2str(fov)  filesep testTrain filesep ...
                            'Light_' num2str(sceneLights(sLight)) ...
                            '_pSize_' num2str(pixelSizes(pSize)) ...
                            filesep num2str(CharNamesList(nc))];
