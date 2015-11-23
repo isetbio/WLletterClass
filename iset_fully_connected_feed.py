@@ -14,11 +14,9 @@ import tensorflow.python.platform
 import numpy
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
-# from tensorflow.g3doc.tutorials.mnist import input_data
-# from tensorflow.g3doc.tutorials.mnist import mnist
 
-import input_data
-import mnist
+import iset2tf
+import isetmnist
 
 
 # Basic model parameters as external flags.
@@ -47,9 +45,10 @@ def placeholder_inputs(batch_size):
   # image and label tensors, except the first dimension is now batch_size
   # rather than the full size of the train or test data sets.
   images_placeholder = tf.placeholder(tf.float32, shape=(batch_size,
-                                                         mnist.IMAGE_PIXELS))
+                                                         isetmnist.IMAGE_PIXELS))
   labels_placeholder = tf.placeholder(tf.int32, shape=(batch_size))
   return images_placeholder, labels_placeholder
+
 def fill_feed_dict(data_set, images_pl, labels_pl):
   """Fills the feed_dict for training the given step.
   A feed_dict takes the form of:
@@ -73,6 +72,7 @@ def fill_feed_dict(data_set, images_pl, labels_pl):
       labels_pl: labels_feed,
   }
   return feed_dict
+
 def do_eval(sess,
             eval_correct,
             images_placeholder,
@@ -99,26 +99,27 @@ def do_eval(sess,
   precision = true_count / num_examples
   print('  Num examples: %d  Num correct: %d  Precision @ 1: %0.04f' %
         (num_examples, true_count, precision))
+
 def run_training():
   """Train MNIST for a number of steps."""
   # Get the sets of images and labels for training, validation, and
   # test on MNIST.
-  data_sets = input_data.read_data_sets(FLAGS.train_dir, FLAGS.fake_data)
+  data_sets = iset2tf.read_data_sets(FLAGS.train_dir, FLAGS.fake_data)
   # Tell TensorFlow that the model will be built into the default Graph.
   with tf.Graph().as_default():
     # Generate placeholders for the images and labels.
     images_placeholder, labels_placeholder = placeholder_inputs(
         FLAGS.batch_size)
     # Build a Graph that computes predictions from the inference model.
-    logits = mnist.inference(images_placeholder,
+    logits = isetmnist.inference(images_placeholder,
                              FLAGS.hidden1,
                              FLAGS.hidden2)
     # Add to the Graph the Ops for loss calculation.
-    loss = mnist.loss(logits, labels_placeholder)
+    loss = isetmnist.loss(logits, labels_placeholder)
     # Add to the Graph the Ops that calculate and apply gradients.
-    train_op = mnist.training(loss, FLAGS.learning_rate)
+    train_op = isetmnist.training(loss, FLAGS.learning_rate)
     # Add the Op to compare the logits to the labels during evaluation.
-    eval_correct = mnist.evaluation(logits, labels_placeholder)
+    eval_correct = isetmnist.evaluation(logits, labels_placeholder)
     # Build the summary operation based on the TF collection of Summaries.
     summary_op = tf.merge_all_summaries()
     # Create a saver for writing training checkpoints.
@@ -178,8 +179,10 @@ def run_training():
                 images_placeholder,
                 labels_placeholder,
                 data_sets.test)
+
 def main(_):
   run_training()
+
 if __name__ == '__main__':
   tf.app.run()
 

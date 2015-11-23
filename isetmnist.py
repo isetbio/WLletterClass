@@ -23,6 +23,7 @@ NUM_CLASSES = 10
 # The MNIST images are always 28x28 pixels.
 IMAGE_SIZE = 28
 IMAGE_PIXELS = IMAGE_SIZE * IMAGE_SIZE
+
 def inference(images, hidden1_units, hidden2_units):
   """Build the MNIST model up to where it may be used for inference.
   Args:
@@ -60,6 +61,7 @@ def inference(images, hidden1_units, hidden2_units):
                          name='biases')
     logits = tf.matmul(hidden2, weights) + biases
   return logits
+
 def loss(logits, labels):
   """Calculates the loss from the logits and the labels.
   Args:
@@ -84,6 +86,7 @@ def loss(logits, labels):
                                                           name='xentropy')
   loss = tf.reduce_mean(cross_entropy, name='xentropy_mean')
   return loss
+
 def training(loss, learning_rate):
   """Sets up the training Ops.
   Creates a summarizer to track the loss over time in TensorBoard.
@@ -106,6 +109,7 @@ def training(loss, learning_rate):
   # (and also increment the global step counter) as a single training step.
   train_op = optimizer.minimize(loss, global_step=global_step)
   return train_op
+
 def evaluation(logits, labels):
   """Evaluate the quality of the logits at predicting the label.
   Args:
@@ -123,5 +127,3 @@ def evaluation(logits, labels):
   correct = tf.nn.in_top_k(logits, labels, 1)
   # Return the number of true entries.
   return tf.reduce_sum(tf.cast(correct, tf.int32))
-
-  
