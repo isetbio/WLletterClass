@@ -183,7 +183,7 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False):
   TRAIN_LABELS = 'train-labels-idx1-ubyte.gz'
   TEST_IMAGES = 't10k-images-idx3-ubyte.gz'
   TEST_LABELS = 't10k-labels-idx1-ubyte.gz'
-  VALIDATION_SIZE = 5000
+  VALIDATION_SIZE = 50
   local_file = maybe_download(TRAIN_IMAGES, train_dir)
   train_images = extract_images(local_file)
   local_file = maybe_download(TRAIN_LABELS, train_dir)
@@ -213,7 +213,7 @@ def read_iset_data_sets(train_imagePath, test_imagePath, fake_data=False,
     data_sets.test = DataSet([], [], fake_data=True)
     return data_sets
 
-  VALIDATION_SIZE = 5000  # 5000
+  VALIDATION_SIZE = 50  # 5000
 
   # GLU: mis modificaciones
   extensions = ['.png']

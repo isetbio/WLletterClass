@@ -36,7 +36,7 @@ s = sceneLights[0]
 p = pixelSizes[0]
 
 train_imagePath = str('/Users/nupic/code/WLletterClass/data/isetMnist' + str(f) +
-                      '/test/Light_' + str(s) + '_pSize_' + str(p))
+                      '/train/Light_' + str(s) + '_pSize_' + str(p))
 test_imagePath = str('/Users/nupic/code/WLletterClass/data/isetMnist' + str(f) +
                       '/test/Light_' + str(s) + '_pSize_' + str(p))
 
@@ -56,7 +56,7 @@ isetmnist = iset2tf.read_iset_data_sets(train_imagePath, test_imagePath,
 numCats = isetmnist.train.labels[0].shape[0]
 imSize = isetmnist.train.images[0,:].shape[0]
 im = Image.open(join(train_imagePath, '0', '000000.png'))
-if not imSize == im:
+if not imSize == im.size[0]*im.size[1]:
     print 'ERROR: image size in numpy and .png is not the same'
 else:
     imH = im.size[1]
@@ -237,6 +237,20 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 # 91% correct.
 
 print accuracy.eval(feed_dict={x: isetmnist.test.images, y_: isetmnist.test.labels})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # BUILD A MULTILAYER CONVOLUTIONAL NETWORK
 # Getting 91% accuracy on MNIST is bad. It's almost embarrassingly bad. 
