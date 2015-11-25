@@ -24,22 +24,24 @@
 ieInit;
 
 % Where are the files to convert
-mnistDirTest = '/Users/nupic/soft/nupic.vision/nupic/vision/mnist/original_mnist/small_training';
-mnistDirTrain = '/Users/nupic/soft/nupic.vision/nupic/vision/mnist/original_mnist/small_training';
+projDir = '~/soft/WLletterClass';
+mnistDirTest  = [projDir filesep 'data/origMnistSmall/test'];
+mnistDirTrain = [projDir filesep 'data/origMnistSmall/train'];
 
-mnistDir = mnistDirTest
-testTrain = 'test'
+mnistDir = mnistDirTrain;
+testTrain = 'train';
 
 
-% OUT_DIR
-projDir = '~/code/WLletterClass';
+
 
 %% EXP. VARIABLES
 % We are going to change lighting and pixel size
 CharNamesList = 0:9;
-pixelSizes = [1.1e-06, 1.25e-06, 1.4e-06];
-sceneLights = [10, 50, 100];
-fov = 0.8;
+pixelSizes = [1.1e-06, 1.25e-06, 1.4e-06]; pSize = 2;
+sceneLights = [5, 15, 45];
+% fovs = [0.6, 0.8, 1];
+dists_ft = [35, 70, 140]; 
+dists = ft2m(dists_ft);
 
 % mnistISETBIOdir = [mnistDir filesep 'OUT'];
 % if ~isdir(mnistISETBIOdir)
@@ -52,17 +54,24 @@ if ViewResults
     CharNamesList = CharNamesList(6); % Visualize only one category for test
 end
 
-
+% For the SCIEN poster Brian created this LED display from Barco
+% It can be out of the loop
+ledBarcoDisplay = displayCreate('LED-BarcoC8');
 
 %% LOOP TO PROCESS ALL IMAGES
-for pSize = 1:length(pixelSizes)
+for dist = 1:length(dists)
     for sLight = 1:length(sceneLights)
         for nc = 1:length(CharNamesList)
             cd([mnistDir filesep num2str(CharNamesList(nc))])
-            WriteFolder = [projDir filesep 'data' filesep 'isetMnist' ...
-                            num2str(fov)  filesep testTrain filesep ...
-                           'Light_' num2str(sceneLights(sLight)) ...
-                           '_pSize_' num2str(pixelSizes(pSize)) ...
+%             WriteFolder = [projDir filesep 'data' filesep 'isetMnist' ...
+%                             num2str(fov)  filesep testTrain filesep ...
+%                            'Light_' num2str(sceneLights(sLight)) ...
+%                            '_pSize_' num2str(pixelSizes(pSize)) ...
+%                            filesep num2str(CharNamesList(nc))];
+            WriteFolder = [projDir filesep 'data'  ...
+                           filesep 'Light_' num2str(sceneLights(sLight)) ...
+                                   '_DistFt_' num2str(dists_ft(dist)) ...
+                            filesep testTrain  ...
                            filesep num2str(CharNamesList(nc))];
             if ~isdir(WriteFolder)
                 mkdir(WriteFolder);
@@ -95,14 +104,18 @@ for pSize = 1:length(pixelSizes)
 %                 retinaDisplay = displaySet(retinaDisplay, 'name', 'AppleRetina2012');
 %                 retinaDisplay = displaySet(retinaDisplay, 'dpi', 326);
 %                 retinaDisplay = displaySet(retinaDisplay, 'viewingdistance', in2m(distin));
-%                 For the SCIEN poster Brian created this LED display from Barco
-                  ledBarcoDisplay = displayCreate('LED-BarcoC8');
+                  ledBarcoDisplay = displaySet(ledBarcoDisplay, 'viewingdistance', dists(dist));
 
                 % CREATE a scene for my files that will simulate
                 % watching the mnist character at 11 inches in an iPhone
 %                 [scene, I] = sceneFromFile(fullFileName, imgType, [], ...
 %                              retinaDisplay, [], [], [], []);
 
+%                 CREATE a scene for my files that will simulate watching the 
+%                 characters at .6, .8, 1 fov, that translates to: 
+                  s = sceneFromFile(fullFileName, imgType, [], ...
+                             ledBarcoDisplay, [], [], [], []);
+%                   distin = m2in(displayGet(ledBarcoDisplay, 'viewing distance'));
 
 
 
@@ -111,8 +124,10 @@ for pSize = 1:length(pixelSizes)
 %                 vimgpix = 28;
 % 
 %                 % 28 dot / 326 dot per inch = dim in inch
-%                 himgin = himgpix / retinadpi;
-%                 vimgin = vimgpix / retinadpi;
+% %                 himgin = himgpix / retinadpi;
+% %                 vimgin = vimgpix / retinadpi;
+%                 himgin = himgpix / displayGet(ledBarcoDisplay, 'dpi');
+%                 vimgin = vimgpix / displayGet(ledBarcoDisplay, 'dpi');
 %                 % dim in inch / dist in inch = tan(alpha)
 %                 halpharad = atan(himgin / distin);
 %                 valpharad = atan(vimgin / distin);
@@ -120,12 +135,12 @@ for pSize = 1:length(pixelSizes)
 %                 hwangulardeg = rad2deg(halpharad);
 %                 vwangulardeg = rad2deg(valpharad);
 % 
-%                 degperdot = displayGet(retinaDisplay, 'deg per dot');
+%                 degperdot = displayGet(ledBarcoDisplay, 'deg per dot');
 %                 secperdot = degperdot * 60 * 60;
 % 
 %                 % Calc dpi with homework1 example
-%                 if ~isequal(sprintf('%.2f',displayGet(retinaDisplay, 'dpi')), ...
-%                         sprintf('%.2f',space2dpi(secperdot, 11)))
+%                 if ~isequal(sprintf('%.2f',displayGet(ledBarcoDisplay, 'dpi')), ...
+%                         sprintf('%.2f',space2dpi(secperdot, distin)))
 %                     error('dpi is not the same, revise calculations')
 %                 end
 % 
@@ -149,8 +164,8 @@ for pSize = 1:length(pixelSizes)
 
                 %%  Diffraction limited optics
 %                 s = sceneCreate('rings rays'); % BW used it as a demo
-                s = sceneFromFile(fullFileName, imgType);
-                s = sceneSet(s,'fov',fov);
+                % s = sceneFromFile(fullFileName, imgType);
+                % s = sceneSet(s,'fov',fov);
                 s = sceneAdjustLuminance(s,sceneLights(sLight));
                 ieAddObject(s); 
                 
@@ -160,7 +175,7 @@ for pSize = 1:length(pixelSizes)
                 end
                 
                 oi = oiCreate;
-                oif2 = oiSet(oi,'optics fnumber',4);
+                oif2 = oiSet(oi,'optics fnumber', 4);
                 oif2 = oiSet(oif2,'optics off axis method','skip');
 
                 oif2 = oiCompute(oif2,s);
@@ -184,7 +199,7 @@ for pSize = 1:length(pixelSizes)
                 sensor = sensorSet(sensor,'exposure duration',1/60);  % 15 ms
                 sensor = sensorSet(sensor,'pixel size constant fill factor',...
                                    pixelSizes(pSize));
-                sensor = sensorSet(sensor,'size',[144 176]);
+                sensor = sensorSet(sensor,'size',[64 64]);
                 sensor = sensorCompute(sensor,oif2);
                 ieAddObject(sensor); 
                 

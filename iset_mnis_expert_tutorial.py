@@ -365,7 +365,7 @@ y_conv=tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 cross_entropy = -tf.reduce_sum(y_*tf.log(y_conv))
 # cross_entropy = tf.Print(cross_entropy, [cross_entropy], "CrossE")
 
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)  # it was 1e-4
+train_step = tf.train.AdamOptimizer(1e-3).minimize(cross_entropy)  # it was 1e-4
 # train_step = tf.train.GradientDescentOptimizer(1e-3).minimize(cross_entropy)
 
 
