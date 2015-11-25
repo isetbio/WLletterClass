@@ -95,6 +95,8 @@ for pSize = 1:length(pixelSizes)
 %                 retinaDisplay = displaySet(retinaDisplay, 'name', 'AppleRetina2012');
 %                 retinaDisplay = displaySet(retinaDisplay, 'dpi', 326);
 %                 retinaDisplay = displaySet(retinaDisplay, 'viewingdistance', in2m(distin));
+%                 For the SCIEN poster Brian created this LED display from Barco
+                  ledBarcoDisplay = displayCreate('LED-BarcoC8');
 
                 % CREATE a scene for my files that will simulate
                 % watching the mnist character at 11 inches in an iPhone
@@ -146,7 +148,7 @@ for pSize = 1:length(pixelSizes)
 %                 end
 
                 %%  Diffraction limited optics
-%                 s = sceneCreate('rings rays');
+%                 s = sceneCreate('rings rays'); % BW used it as a demo
                 s = sceneFromFile(fullFileName, imgType);
                 s = sceneSet(s,'fov',fov);
                 s = sceneAdjustLuminance(s,sceneLights(sLight));
