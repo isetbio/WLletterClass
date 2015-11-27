@@ -3,7 +3,11 @@
 # Import mnist database and adapt it the tf way
 import input_data, iset2tf
 # mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-mnist = input_data.read_iset_data_sets("myMNIST/", one_hot=True)
+train_imagePath = 'data/origMnistSmallUpsampled/train'
+test_imagePath = 'data/origMnistSmallUpsampled/test'
+mnist = iset2tf.read_iset_data_sets(train_imagePath, test_imagePath,
+                                       one_hot=True, tf_or_nupic='tf',
+                                       binarize=False, randomize = True)
 
 # Start TensorFlow InteractiveSession
 # Tensorflow relies on a highly efficient C++ backend to do its computation. 
@@ -46,7 +50,8 @@ sess = tf.InteractiveSession()
 # -- Placeholders: 
 # We start building the computation graph by creating nodes for 
 #    the input images and target output classes.
-x = tf.placeholder("float", shape=[None, 784])
+# x = tf.placeholder("float", shape=[None, 784])
+x = tf.placeholder("float", shape=[None, 64*64])
 y_ = tf.placeholder("float", shape=[None, 10])
 
 # Here x and y_ aren't specific values. Rather, they are each a placeholder -- a 
@@ -68,8 +73,11 @@ y_ = tf.placeholder("float", shape=[None, 10])
 # computation graph. It can be used and even modified by the computation. 
 # In machine learning applications, one generally has the model paramaters be 
 # Variables.
-W = tf.Variable(tf.zeros([784,10]))
+# W = tf.Variable(tf.zeros([784,10]))
+# b = tf.Variable(tf.zeros([10]))
+W = tf.Variable(tf.zeros([64*64,10]))
 b = tf.Variable(tf.zeros([10]))
+
 
 # We pass the initial value for each parameter in the call to tf.Variable. 
 # In this case, we initialize both W and b as tensors full of zeros. 
@@ -204,7 +212,8 @@ b_conv1 = bias_variable([32])
 # third dimensions corresponding to image width and height, and the final 
 # dimension corresponding to the number of color channels.
 
-x_image = tf.reshape(x, [-1,28,28,1])
+# x_image = tf.reshape(x, [-1,28,28,1])
+x_image = tf.reshape(x, [-1,64,64,1])
 
 # We then convolve x_image with the weight tensor, add the bias, apply the ReLU 
 # function, and finally max pool.
@@ -230,10 +239,12 @@ h_pool2 = max_pool_2x2(h_conv2)
 #  tensor from the pooling layer into a batch of vectors, multiply by a weight 
 #  matrix, add a bias, and apply a ReLU.
 
-W_fc1 = weight_variable([7 * 7 * 64, 1024])
+# W_fc1 = weight_variable([7 * 7 * 64, 1024])
+W_fc1 = weight_variable([16 * 16 * 64, 1024])
 b_fc1 = bias_variable([1024])
 
-h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
+# h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
+h_pool2_flat = tf.reshape(h_pool2, [-1, 16*16*64])
 h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 
 

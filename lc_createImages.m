@@ -38,9 +38,9 @@ testTrain = 'train';
 % We are going to change lighting and pixel size
 CharNamesList = 0:9;
 pixelSizes = [1.1e-06, 1.25e-06, 1.4e-06]; pSize = 2;
-sceneLights = [5, 15, 45];
+sceneLights = [45];
 % fovs = [0.6, 0.8, 1];
-dists_ft = [35, 70, 140]; 
+dists_ft = [140]; 
 dists = ft2m(dists_ft);
 
 % mnistISETBIOdir = [mnistDir filesep 'OUT'];

@@ -435,5 +435,51 @@ def squareImage(filename, outdir=None, catFolder=None, saveFile=False):
     return ImgSq
 
 
+def upsampleMnist(filename, outdir=None, catFolder=None, saveFile=False):
+    """
+    # # CODE TO UPSAMPLE
+    # train_imagePath = str('data/origMnistSmall/train')
+    # test_imagePath = str('data/origMnistSmall/test')
+    # outdir = 'data/origMnistSmallUpsampled'
+    # train_upImageList = iset2tf.createImageList(train_imagePath, '.png', 'tf')
+    # train_outdir = outdir + '/train'
+    # test_upImageList = iset2tf.createImageList(test_imagePath, '.png', 'tf')
+    # test_outdir = outdir + '/test'
+    #
+    # for nnc in train_upImageList:
+    #      iset2tf.upsampleMnist(nnc[0], train_outdir, nnc[2], saveFile=True)
+    # for nnc in test_upImageList:
+    #      iset2tf.upsampleMnist(nnc[0], test_outdir, nnc[2], saveFile=True)
+    Args:
+        filename:
+        outdir:
+        catFolder:
+        saveFile:
+
+    Returns:
+
+    """
+    # Load required packages
+    # Create a blank image with black background, this is what we will return
+    import os
+    from PIL import Image
+    im = Image.open(filename)
+    ImgSq = Image.new("L", (64, 64), 'black')
+    im2 = im.resize((56,56), Image.BILINEAR)
+    ImgSq.paste(im2, (4,4))
+
+    if saveFile:
+      if not outdir and not catFolder:
+        newFilename = filename.replace('.png', 'sq.png')
+      elif outdir and catFolder:
+        if not os.path.isdir(os.path.join(outdir, catFolder)):
+          os.mkdir(os.path.join(outdir, catFolder))
+        newFilename = os.path.join(outdir, catFolder, os.path.basename(filename))
+      else:
+        print('ERROR: Revise parameters')
+      ImgSq.save(newFilename, 'PNG')
+    return ImgSq
+
+
 
 

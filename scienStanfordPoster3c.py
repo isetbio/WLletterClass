@@ -12,12 +12,6 @@ join = os.path.join
 
 
 script, light, distance, loop = argv
-# light = "15"
-# distance = "140"
-# loop = "500"
-
-
-
 
 # Example in how to launch it from command line
 # nohup python scienStanfordPoster.py 15 140 10 >> 1514010.txt &
@@ -68,8 +62,8 @@ test_imagePath = str('data/Light_' + str(s) + '_DistFt_' + str(d) + '/test')
 
 
 # BIG MNIST: To use the 64x64 images, upsampled bilinearly from the 28x28 ones
-# train_imagePath = 'data/origMnistSmallUpsampled/train'
-# test_imagePath = 'data/origMnistSmallUpsampled/test'
+train_imagePath = 'data/origMnistSmallUpsampled/train'
+test_imagePath = 'data/origMnistSmallUpsampled/test'
 
 
 # Added several options when reading the images, mostly:
@@ -125,7 +119,7 @@ y_ = tf.placeholder("float", shape=[None, numCats])
 # the model, let's create two handy functions to do it for us.
 
 def weight_variable(shape):
-  initial = tf.truncated_normal(shape, stddev=0.1)
+  initial = tf.truncated_normal(shape, stddev=0.01)  # Was 0.1
   return tf.Variable(initial)
 
 def bias_variable(shape):
@@ -147,6 +141,10 @@ def conv2d(x, W):
 def max_pool_2x2(x):
   return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
                         strides=[1, 2, 2, 1], padding='SAME')
+# def max_pool_4x4(x):
+#   return tf.nn.max_pool(x, ksize=[1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1],
+#                            strides=[1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1],
+#                            padding='SAME')
 
 # -- First Convolutional Layer
 # We can now implement our first layer. It will consist of convolution, 
@@ -234,7 +232,7 @@ cross_entropy = -tf.reduce_sum(y_*tf.log(y_conv))
 cost = cross_entropy
 # cross_entropy = tf.Print(cross_entropy, [cross_entropy], "CrossE")
 
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)  # it was 1e-4
+train_step = tf.train.AdamOptimizer(1e-3).minimize(cross_entropy)  # it was 1e-4
 # train_step = tf.train.GradientDescentOptimizer(1e-3).minimize(cross_entropy)
 
 
@@ -255,7 +253,7 @@ tf.scalar_summary("loss function", cost)
 merged_summary_op = tf.merge_all_summaries()
 # Create the log folder
 logDir = join(workdir, 'logs', str(light+'_'+distance+'_'+loop))
-# logDir = join(workdir, 'logs', 'mnistUpsampled')
+logDir = join(workdir, 'logs', 'mnistUpsampled')
 if not os.path.isdir(logDir):
     os.mkdir(logDir)
 
@@ -268,7 +266,7 @@ with tf.Session() as sess:
     summary_writer = tf.train.SummaryWriter(logDir, graph_def=sess.graph_def)
 
     for i in range(int(loop)):
-      batch = isetmnist.train.next_batch(50)
+      batch = isetmnist.train.next_batch(50)  # It was 50
       # TRAIN
       train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 
@@ -291,3 +289,14 @@ with tf.Session() as sess:
 # 99.2%.
 # We have learned how to quickly and easily build, train, and evaluate a 
 # fairly sophisticated deep learning model using TensorFlow.
+
+# DELETE
+# merged_summary_op = tf.merge_all_summaries()
+# summary_writer = tf.train.SummaryWriter('/tmp/mnist_logs', sess.graph_def)
+# total_step = 0
+# while training:
+#   total_step += 1
+#   session.run(training_op)
+#   if total_step % 100 == 0:
+#     summary_str = session.run(merged_summary_op)
+#     summary_writer.add_summary(summary_str, total_step)
