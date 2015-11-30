@@ -1,0 +1,248 @@
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+step 0, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 13:48:02
+step 100, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 13:49:12
+step 200, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 13:50:22
+step 300, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 13:51:32
+step 400, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 13:52:42
+step 500, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 13:53:52
+step 600, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 13:55:02
+step 700, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 13:56:14
+step 800, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 13:57:29
+step 900, training accuracy 0.18 , Light( 15 ), Dist( 140 ), 2015-11-26 13:58:42
+test accuracy 0.1
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+step 0, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:16:40
+step 10, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:16:47
+step 20, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:16:55
+step 30, training accuracy 0.2 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:02
+step 40, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:09
+step 50, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:17
+step 60, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:24
+step 70, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:31
+step 80, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:38
+step 90, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:17:45
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+step 0, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:46:28
+step 10, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:46:35
+step 20, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:46:42
+step 30, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:46:50
+step 40, training accuracy 0.18 , Light( 15 ), Dist( 140 ), 2015-11-26 14:46:57
+step 50, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:04
+step 60, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:11
+step 70, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:19
+step 80, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:26
+step 90, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:33
+step 100, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:41
+step 110, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:48
+step 120, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:47:55
+step 130, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:02
+step 140, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:10
+step 150, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:17
+step 160, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:24
+step 170, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:31
+step 180, training accuracy 0.2 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:39
+step 190, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:46
+step 200, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:48:53
+step 210, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:01
+step 220, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:08
+step 230, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:15
+step 240, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:22
+step 250, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:30
+step 260, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:37
+step 270, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:45
+step 280, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:52
+step 290, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:49:59
+step 300, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:07
+step 310, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:14
+step 320, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:21
+step 330, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:29
+step 340, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:36
+step 350, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:44
+step 360, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:51
+step 370, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:50:59
+step 380, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:06
+step 390, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:14
+step 400, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:21
+step 410, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:28
+step 420, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:35
+step 430, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:43
+step 440, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:50
+step 450, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:51:57
+step 460, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:05
+step 470, training accuracy 0.2 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:12
+step 480, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:19
+step 490, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:26
+step 500, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:34
+step 510, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:41
+step 520, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:48
+step 530, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:52:55
+step 540, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:03
+step 550, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:10
+step 560, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:17
+step 570, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:25
+step 580, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:32
+step 590, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:39
+step 600, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:46
+step 610, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:53:54
+step 620, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:01
+step 630, training accuracy 0.16 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:08
+step 640, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:16
+step 650, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:23
+step 660, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:30
+step 670, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:37
+step 680, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:45
+step 690, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:54:53
+step 700, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:01
+step 710, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:09
+step 720, training accuracy 0.02 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:17
+step 730, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:25
+step 740, training accuracy 0.18 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:32
+step 750, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:40
+step 760, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:48
+step 770, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:55:55
+step 780, training accuracy 0.18 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:03
+step 790, training accuracy 0.04 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:11
+step 800, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:18
+step 810, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:26
+step 820, training accuracy 0.18 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:34
+step 830, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:41
+step 840, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:49
+step 850, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:56:57
+step 860, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:04
+step 870, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:12
+step 880, training accuracy 0.18 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:19
+step 890, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:27
+step 900, training accuracy 0.1 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:34
+step 910, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:42
+step 920, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:50
+step 930, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:57:57
+step 940, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:58:05
+step 950, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 14:58:13
+step 960, training accuracy 0.06 , Light( 15 ), Dist( 140 ), 2015-11-26 14:58:20
+step 970, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:58:28
+step 980, training accuracy 0.14 , Light( 15 ), Dist( 140 ), 2015-11-26 14:58:36
+step 990, training accuracy 0.08 , Light( 15 ), Dist( 140 ), 2015-11-26 14:58:43
+test accuracy 0.1
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+step 0, training accuracy 0.12 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:00
+step 10, training accuracy 0.3 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:08
+step 20, training accuracy 0.48 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:15
+step 30, training accuracy 0.76 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:22
+step 40, training accuracy 0.8 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:30
+step 50, training accuracy 0.76 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:37
+step 60, training accuracy 0.84 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:44
+step 70, training accuracy 0.74 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:51
+step 80, training accuracy 0.88 , Light( 15 ), Dist( 140 ), 2015-11-26 15:42:59
+step 90, training accuracy 0.8 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:06
+step 100, training accuracy 0.88 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:13
+step 110, training accuracy 0.84 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:21
+step 120, training accuracy 0.84 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:28
+step 130, training accuracy 0.82 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:35
+step 140, training accuracy 0.9 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:42
+step 150, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:50
+step 160, training accuracy 0.92 , Light( 15 ), Dist( 140 ), 2015-11-26 15:43:57
+step 170, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:04
+step 180, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:11
+step 190, training accuracy 0.92 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:19
+step 200, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:26
+step 210, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:33
+step 220, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:40
+step 230, training accuracy 0.88 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:48
+step 240, training accuracy 0.9 , Light( 15 ), Dist( 140 ), 2015-11-26 15:44:55
+step 250, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:02
+step 260, training accuracy 0.9 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:09
+step 270, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:17
+step 280, training accuracy 0.9 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:24
+step 290, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:31
+step 300, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:38
+step 310, training accuracy 0.92 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:46
+step 320, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:45:53
+step 330, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:00
+step 340, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:07
+step 350, training accuracy 0.88 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:15
+step 360, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:22
+step 370, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:29
+step 380, training accuracy 0.92 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:36
+step 390, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:44
+step 400, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:51
+step 410, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:46:58
+step 420, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:06
+step 430, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:13
+step 440, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:20
+step 450, training accuracy 0.92 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:27
+step 460, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:35
+step 470, training accuracy 0.92 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:42
+step 480, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:50
+step 490, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:47:57
+step 500, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:04
+step 510, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:11
+step 520, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:19
+step 530, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:26
+step 540, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:33
+step 550, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:41
+step 560, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:48
+step 570, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:48:55
+step 580, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:03
+step 590, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:10
+step 600, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:18
+step 610, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:25
+step 620, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:32
+step 630, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:40
+step 640, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:47
+step 650, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:49:54
+step 660, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:02
+step 670, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:09
+step 680, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:16
+step 690, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:23
+step 700, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:31
+step 710, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:38
+step 720, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:45
+step 730, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:50:53
+step 740, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:00
+step 750, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:07
+step 760, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:14
+step 770, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:22
+step 780, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:29
+step 790, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:36
+step 800, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:44
+step 810, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:51
+step 820, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:51:58
+step 830, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:05
+step 840, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:13
+step 850, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:20
+step 860, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:27
+step 870, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:35
+step 880, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:42
+step 890, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:50
+step 900, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:52:57
+step 910, training accuracy 0.94 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:04
+step 920, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:12
+step 930, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:19
+step 940, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:26
+step 950, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:34
+step 960, training accuracy 0.96 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:41
+step 970, training accuracy 0.98 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:48
+step 980, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:53:55
+step 990, training accuracy 1 , Light( 15 ), Dist( 140 ), 2015-11-26 15:54:03
+test accuracy 0.958
+Extracting  10000  images.
