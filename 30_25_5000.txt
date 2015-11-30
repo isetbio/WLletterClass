@@ -503,3 +503,4 @@ step 4970, training accuracy 1 , Light( 30 ), Dist( 25 ), 2015-11-29 06:50:31
 step 4980, training accuracy 1 , Light( 30 ), Dist( 25 ), 2015-11-29 06:50:40
 step 4990, training accuracy 1 , Light( 30 ), Dist( 25 ), 2015-11-29 06:50:50
 test accuracy 0.96
+
