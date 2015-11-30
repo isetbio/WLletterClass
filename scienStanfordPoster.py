@@ -18,6 +18,21 @@ script, light, distance, loop = argv
 
 
 
+# tf.image_summary(tag, tensor, max_images=None, collections=None, name=None)
+# tf.histogram_summary(tag, values, collections=None, name=None)
+# tf.merge_summary(inputs, collections=None, name=None)
+# tf.merge_all_summaries(key=summaries)
+# class tf.train.SummaryWriter
+# tf.train.summary_iterator(path)
+# Training utilities
+# tf.train.global_step(sess, global_step_tensor)
+# tf.train.write_graph(graph_def, logdir, name, as_text=True)
+# This library provides a set of classes and functions that helps train models.
+
+
+
+
+
 
 # Example in how to launch it from command line
 # nohup python scienStanfordPoster.py 15 140 10 >> 1514010.txt &
@@ -288,6 +303,5 @@ with tf.Session() as sess:
         x: isetmnist.test.images, y_: isetmnist.test.labels, keep_prob: 1.0})
 
 # The final test set accuracy after running this code should be approximately 
-# 99.2%.
-# We have learned how to quickly and easily build, train, and evaluate a 
-# fairly sophisticated deep learning model using TensorFlow.
+# 99.2%. (this is for the 60,000 + 10,000  set run with loop = 20,000
+

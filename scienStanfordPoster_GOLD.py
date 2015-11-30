@@ -68,8 +68,8 @@ test_imagePath = str('data/Light_' + str(s) + '_DistFt_' + str(d) + '/test')
 
 
 # BIG MNIST: To use the 64x64 images, upsampled bilinearly from the 28x28 ones
-# train_imagePath = 'data/origMnistSmallUpsampled/train'
-# test_imagePath = 'data/origMnistSmallUpsampled/test'
+train_imagePath = 'data/origMnistSmallUpsampled/train'
+test_imagePath = 'data/origMnistSmallUpsampled/test'
 
 
 # Added several options when reading the images, mostly:
@@ -255,7 +255,7 @@ tf.scalar_summary("loss function", cost)
 merged_summary_op = tf.merge_all_summaries()
 # Create the log folder
 logDir = join(workdir, 'logs', str(light+'_'+distance+'_'+loop))
-# logDir = join(workdir, 'logs', 'mnistUpsampled')
+# logDir = join(workdir, 'logs', 'mnistUpsampledGOLD10000')
 if not os.path.isdir(logDir):
     os.mkdir(logDir)
 
@@ -273,7 +273,7 @@ with tf.Session() as sess:
       train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 
       # PRINT AND LOG
-      if i%100 == 0:
+      if i%10 == 0:
         feed_dict = {x:batch[0], y_: batch[1], keep_prob: 1.0}
         train_accuracy = accuracy.eval(feed_dict=feed_dict)
         print "step %d, training accuracy %g"%(i, train_accuracy),
