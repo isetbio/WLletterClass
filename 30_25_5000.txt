@@ -1,0 +1,5 @@
+Extracting  10000  images.
+Extracting  10000  labels
+Extracting  1000  images.
+Extracting  1000  labels
+step 0, training accuracy 0.02 , Light( 30 ), Dist( 25 ), 2015-11-28 18:33:48

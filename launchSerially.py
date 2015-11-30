@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
 # MBP:
-sceneLights = ['5', '15', '45'];
-dists = ['140']
-loop = '10'
+# sceneLights = ['5', '15', '45'];
+# dists = ['140']
+# loop = '10'
 
 
 # # sienna:
-# sceneLights = ['5', '15', '45'];
-# dists = ['140']
-# loop = '10'
+sceneLights = ['1'];
+dists = ['25', '50', '70','100', '140']
+loop = '5000'
 
 
 import subprocess as sp
