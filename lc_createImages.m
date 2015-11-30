@@ -32,15 +32,13 @@ mnistDir = mnistDirTrain;
 testTrain = 'train';
 
 
-
-
 %% EXP. VARIABLES
 % We are going to change lighting and pixel size
-CharNamesList = 0:9;
+CharNamesList = 3:6;
 pixelSizes = [1.1e-06, 1.25e-06, 1.4e-06]; pSize = 2;
 sceneLights = [45];
 % fovs = [0.6, 0.8, 1];
-dists_ft = [140]; 
+dists_ft = [25]; 
 dists = ft2m(dists_ft);
 
 % mnistISETBIOdir = [mnistDir filesep 'OUT'];
