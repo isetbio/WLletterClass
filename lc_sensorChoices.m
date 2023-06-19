@@ -38,7 +38,10 @@ sensor = sensorSet(sensor,'noise flag',2);
 
 sensor = sensorSet(sensor,'exposure duration',1/60);  % 15 ms
 
-sensor = sensorSet(sensor,'size',[144 176]);
+fov = sceneGet(s,'fov')*1.1;
+sensorSetSizeToFOV(sensor,fov,scene,oi);
+% sensor = sensorSet(sensor,'size',[144 176]);
+
 sensor = sensorCompute(sensor,oif2);
 ieAddObject(sensor); sensorWindow('scale',true);
 
